@@ -6,13 +6,10 @@ int main(){
 	int year;
 	int month;
 
-
 	printf("Enter the month, day, year : ");
 	scanf("%d%d%d",&month,&day,&year);
         double l = LEAP(year);
-
-
-
+	
 	switch(month-1){
 
 		case 11:
