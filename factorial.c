@@ -1,6 +1,5 @@
-#include<stdio.h>  
-  
-long factorial(int n)  
+#include<stdio.h>    
+void factorial(int n)  
 {  
   if (n == 0)  
     return 1;  
@@ -8,14 +7,12 @@ long factorial(int n)
     return(n * factorial(n-1));  
 }  
    
-void main()  
+main()  
 {  
   int number;  
-  long fact;  
+  int fact;  
   printf("Enter a number: ");  
   scanf("%d", &number);   
-   
   fact = factorial(number);  
-  printf("Factorial of %d is %ld\n", number, fact);  
-  return 0;  
+  printf("Factorial of %d is %ld\n", number, fact);    
 }  
