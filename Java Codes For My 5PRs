@@ -1,0 +1,10 @@
+class HelloWorld 
+{ 
+ 
+
+//The main method is what executes the Java code
+ public static void main(String args[]) 
+    { 
+        System.out.println("This is the maijn Method."); 
+    } 
+} 
