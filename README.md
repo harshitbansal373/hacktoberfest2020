@@ -47,7 +47,7 @@
 -   Anything valuable.
 
 ***
-Steps for adding your name below
+Steps for adding your name below ---->
 
     1. Fork this repo
     2. commit the code
