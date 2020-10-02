@@ -40,7 +40,7 @@
 | [hackerrank-solutions](https://github.com/harshitbansal373/hackerrank-solutions/) | [![GitHub issues](https://img.shields.io/github/issues/harshitbansal373/hackerrank-solutions?color=pink&logo=github)](https://github.com/harshitbansal373/hackerrank-solutions/issues)  | [![GitHub PRs](https://img.shields.io/github/issues-pr/harshitbansal373/hackerrank-solutions?style=social&logo=github)](https://github.com/harshitbansal373/hackerrank-solutions/pulls)  | [![GitHub forks](https://img.shields.io/github/forks/harshitbansal373/hackerrank-solutions?logo=git)](https://github.com/harshitbansal373/hackerrank-solutions/network) |
 
 
-## Rules
+## Rules for Hactoberfest 2020
 
 -   "Starter code" or "Beginner's code" in any language.
 -   Data Structure and Algorithms.
