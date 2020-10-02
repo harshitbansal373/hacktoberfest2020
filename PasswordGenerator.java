@@ -1,8 +1,5 @@
+//Simple password generator to build passwords following the rules of strong passwords.
 import java.util.*;
-
-
-
-
 public class PasswordGenerator {
 
     static String generatePassword(int min_length, int max_length){
