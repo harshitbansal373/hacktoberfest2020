@@ -45,6 +45,7 @@
 -   "Starter code" or "Beginner's code" in any language.
 -   Data Structure and Algorithms.
 -   Anything valuable.
+-   Rules for Oct fest 2020
 
 ***
 Steps for contribution -
