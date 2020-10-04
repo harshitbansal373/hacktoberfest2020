@@ -1,8 +1,11 @@
 //FirstCommit
 #include <stdio.h>
+#include <stdlib.h>
 int main() 
 {
+  system("cls");
 	int n,n1,sum=0,fact=1,rem;
+    printf("Enter a number: ");
     scanf("%d",&n);
     n1 = n;
     while(n1>0)
@@ -19,9 +22,6 @@ int main()
    if (sum == n)
    printf("Yes");
    else
-   printf("No");
-  
-      
-    
+   printf("No");  
 	return 0;
 }
