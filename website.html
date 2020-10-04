@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF.8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X=UA-Compatible" content="ie-edge">
+    <title>webpage</title>
+    
+    <style>
+        body {
+            background-image: url("https://i.redd.it/hey0w7d8z8e21.jpg");
+            background-repeat: no-repeat;
+            background-size: 1536px 753px;
+
+        }
+
+        .navbar {
+            background-color: black;
+            border-radius: 12px;
+        }
+
+        .navbar ul {
+            overflow: hidden;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+
+        .navbar li :hover {
+            text-decoration: none;
+            color: rgb(253, 53, 53);
+            font-size: 15px;
+            transition: 0.25s;
+        }
+
+        .navbar li a {
+            color: rgb(152, 223, 235);
+            padding: 15px;
+            font-family: cursive;
+            text-decoration: none;
+        }
+
+
+        .search {
+            text-align: center;
+            margin: 14px 1200px;
+            color: rgb(66, 65, 65);
+            width: 200px;
+            background-color: white;
+            border-radius: 3px;
+        }
+
+
+        .navbar input {
+            padding: 4px;
+            text-decoration: solid;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+
+        img {
+            border-radius: 8px;
+
+        }
+
+        .image :hover {
+
+            border-radius: 50%;
+        }
+
+        .container {
+            
+            margin: 100px auto;
+            width: 550px;
+            height: 400px;
+            background-color: rgb(14, 13, 14);
+        }
+
+        .container h1 {
+            text-align: center;
+            color: rgb(253, 252, 252);
+            font-family: cursive;
+            font-size: 50px;
+            cursor: grab;
+        }
+        .container h2{
+            text-align:center;
+            font-family: cursive;
+            cursor: grab;
+            background-color: aqua;
+            
+            
+        }
+
+        .container input {
+            color: tomato;
+            border: 2px solid rgb(78, 131, 245);
+            border-radius: 40px;
+            display: block;
+            width: 250px;
+            height: 60px;
+            margin: 20px auto;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(15, 15, 15);
+        }
+
+        .container button {
+            border: 2px solid rgb(189, 46, 153);
+
+            border-radius: 20px;
+            display: block;
+            width: 125px;
+            height: 40px;
+            margin: auto;
+            cursor: pointer;
+            background-color: black;
+            color: aliceblue;
+            
+            transition: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        }
+
+        .btn :hover {
+            background-color: rgb(189, 46, 153);
+            color: blanchedalmond;
+        }
+
+        .form :hover {
+            border: 2px solid rgb(23, 148, 79);
+            width: 350px;
+            transition: 0.3s;
+        }
+        
+        
+        
+        
+        
+    </style>
+    
+
+</head>
+
+<body>
+
+    <header class="top">
+
+        <nav class="navbar">
+            <ul>
+                <li class="image">
+                    <a href="https://google.com"><img src="_DSC0067.JPG.jpg" height="35px" width="35px" alt=""></a>
+                </li>
+                <li><a href="#">HOME</li></a>
+                
+                <li><a href="#">NAVIGATE</li></a>
+                <li><a href="#">ABOUT</li></a>
+                <li><a href="#">CONTACT US</li></a>
+
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="search here">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>GET IN</h1>
+        
+            <div class="form">
+                <input type="text" name="form" placeholder="Username">
+            </div>
+            <div class="form">
+                <input type="password" name="form" id='pass' placeholder="Password" onkeyup="pass_check();">
+                <h2 id='pass_msg'></h2>
+            </div>
+            <div class="btn">
+                <button a href="https://facebook.com" onclick="return confirm('Are you sure?');">LOGIN</a></button>
+            </div>
+            
+            
+        </form>
+    </div>
+    </div>
+    <script type="text/javascript">
+    function pass_check(){
+        var password= document.getElementById('pass').value;
+        if (password.length <6){
+            document.getElementById('pass_msg').innerHTML='password length is weak';
+            document.getElementById('pass_msg').style.colour='red';
+        }
+        if (password.length >=6){
+            document.getElementById('pass_msg').innerHTML='password length is good';
+            document.getElementById('pass_msg').style.colour='green';
+        }
+
+    }
+    </script>
+
+</body>
+
+</html>
