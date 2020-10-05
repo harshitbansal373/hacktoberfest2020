@@ -42,3 +42,6 @@ int main() {
     cout<<"Searching 7 "<<h.search(7)<<endl;
     return 0;
 }
+
+//author: goel28priyanshu
+//Date: 05 October 2020
