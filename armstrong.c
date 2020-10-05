@@ -12,14 +12,14 @@ int main()
     n=n/10;    
   }    
   if(temp==sum)    
-    printf("armstrong  number ");    
+    printf("Given number is an armstrong  number ");    
   else    
-    printf("not armstrong number");    
+    printf("Given number is not an armstrong number");    
   return 0;  
   }   
 
 /*
 Output:
 enter the number=153
-armstrong number
+Given number is an armstrong number
 */
