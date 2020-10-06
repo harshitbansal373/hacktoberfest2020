@@ -5,9 +5,9 @@ int main()
     int n;
     cout << "Enter an integer: ";
     cin >> n;
-    if ( n % 2 == 0)
+    if ( n % 2 == 0) //function to check even
         cout << n << " is even.";
-    else
+    else//function to check odd
         cout << n << " is odd.";
     return 0;
 }
