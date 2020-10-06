@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+ {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+	
+	int t;
+	cin >> t;
+	while(t--)
+	{
+	    int n;
+	    cin >> n;
+	    int* arr = new int[n];
+	    for(int i = 0; i < n; i++)
+	    cin >> arr[i];
+	    
+	    int cnt = n;
+	    while(cnt > 0)
+	    {
+	       int c = 0;
+	       int min_ = *min_element(arr,arr+n);
+	       for(int i = 0; i < n; i++)
+	       {
+	           if(arr[i] != INT_MAX)
+	           {
+	               if(arr[i] - min_ <= 0)
+	               arr[i] = INT_MAX;
+	               else
+	               c++;
+	           }
+	       }
+	       
+	       if(c != 0)
+	       cout << c << " ";
+	       cnt = c;
+	       
+	    }
+	    
+	    cout << endl;
+	    
+	}
+	
+	return 0;
+}
