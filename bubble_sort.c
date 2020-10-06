@@ -14,6 +14,12 @@ printf("\n Original Array\n");
 for(int i=0;i<N;i++){
   printf("%d ",arr[i]);
 }
+  int count=0;
+  for(int i=0;i<N-1;i++){
+    if(arr[i]>arr[i+1])
+      count++;
+  }
+  if (count>0){
 int temp;
 for(int i=0;i<N-1;i++){
   for(int j=0;j<N-i-1;j++){
@@ -23,7 +29,7 @@ for(int i=0;i<N-1;i++){
       arr[j+1]=temp;
     }
   }
-}
+}}
 printf("\n Sorted Array\n");
 for(int i=0;i<N;i++){
   printf("%d ",arr[i]);
