@@ -1,11 +1,11 @@
 #include<stdio.h>
 
 void main() {
-  int r;
+  float r; //radius can be decimal no. also
   float pi = 3.14, area, cf;
   
   printf("Enter the radius of circle: ");
-  scanf("%d",&r);
+  scanf("%f",&r);
   
   area = pi * r * r;
   printf("Area of Circle = %f", area);
