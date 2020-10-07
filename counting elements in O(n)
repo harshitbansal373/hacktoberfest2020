@@ -1,0 +1,6 @@
+l=[1,2,3,4,6,3,5,3,6,5,3,7,10]
+for i in range(len(l)):
+    temp=l.count(l[i])
+    print(" "+str(l[i])+" ocuurs  "+str(temp)+" times.")
+
+#rohan     
