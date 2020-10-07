@@ -1,31 +1,15 @@
 print("Armstrong number checker(within interval)")
-print()
-
-print()
-
 print("**Here you can check Armstrong numbers available within your desired interval**")
+no_range = list(map(int,input('Enter range').split()))
 
-print()
-
-print()
-l_range = int(input("Enter a lower range of your interval: "))
-u_range=int(input("Enter a upper range of your interval: "))
-
-for num in range(l_range, u_range + 1):
-
-   # order of number
-   order = len(str(num))
-    
+print("Armstrong numbers between",no_range[0],"&",no_range[1],"is: \n")
+for num in range(no_range[0], no_range[1] + 1):
    # initialize sum
-   sum = 0
-
-   temp = num
-   while temp > 0:
-       digit = temp % 10
-       sum += digit ** order
-       temp //= 10
-
-   if num == sum:
-       print("Armstrong numbers between",l_range,"&",u_range,"is: \n")
-       print(num)
-   
+    sum = 0
+    temp = num
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** 3
+        temp //= 10
+    if sum == num:
+        print(num)
