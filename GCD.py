@@ -1,23 +1,16 @@
-'''
-Greatest common divisor
-input : 
-        no = list integers
-output :
-        GCD of those integers
-     
-'''
+def compute_hcf(x, y):
 
-no = input().split()
-a = int(no[0])
-b = int(no[1])
-assert (a >= 0 and b >= 0), "a,b should be >= 0"
+# choose the smaller number
+    if x > y:
+        smaller = y
+    else:
+        smaller = x
+    for i in range(1, smaller+1):
+        if((x % i == 0) and (y % i == 0)):
+            hcf = i 
+    return hcf
 
+num1 = int(input("enter a number : ") 
+num2 = int(input("enter a number : ")
 
-def gcd(a, b):
-    if (a > b):
-        while (b != 0):
-            a, b = b, a % b
-    return a
-
-
-print (gcd(a, b))
+print("The H.C.F. is", compute_hcf(num1, num2))
