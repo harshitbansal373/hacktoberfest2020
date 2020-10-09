@@ -14,7 +14,7 @@ public class Main {
             array[i]=scanner.nextInt();
 
         }
-        return array;
+        return array; // returning array
 
     }
     private static int[] reverse(int [] array){

@@ -1,0 +1,17 @@
+import re
+
+#Sample files links:
+#The 'mbox-short.txt' file can be downloaded from the link: https://www.py4e.com/code3/mbox-short.txt
+#The 'mbox.txt' file can be downloaded from the link: https://www.py4e.com/code3/mbox.txt
+#The 'regex_sum_975455.txt' file can be downloaded from the link: http://py4e-data.dr-chuck.net/regex_sum_975455.txt
+#The 'regex_sum_42.txt' file can be downloaded from the link: http://py4e-data.dr-chuck.net/regex_sum_42.txt
+
+fname = input('Enter file name: ')
+if len(fname) < 1 : fname = 'regex_sum_42.txt'  #Default file if no file entered
+fh = open(fname)
+sum = 0
+for index in fh :
+	temp = re.findall('[0-9]+', index)
+	for index in temp :
+		sum = sum + int(index)
+print("The sum of all numbers in the file is",sum)

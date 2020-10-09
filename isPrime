@@ -1,0 +1,28 @@
+import java.util.*;
+class Prime { 
+  
+    static boolean isPrime(int n) 
+    { 
+        // Corner case 
+        if (n <= 1) 
+            return false; 
+  
+        // Checking from 2 to square root of n 
+        for (int i = 2; i <= Math.sqrt(n); i++) 
+            if (n % i == 0) 
+                return false; 
+  
+        return true; 
+    } 
+  
+    //main 
+    public static void main(String args[]) 
+    { 
+        System.out.println("Enter the number to be checked");
+        int n=s.nextInt();
+        if(isPrime(n)){
+            System.out.println("YES");
+        else
+            System.out.println("NO");
+    } 
+} 
