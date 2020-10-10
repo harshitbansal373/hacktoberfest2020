@@ -1,0 +1,125 @@
+#outer
+{
+	height:840px;
+	width:1000px;
+	margin:0px auto;
+}
+#title
+{
+	height:150px;
+	width:1000px;
+	background-color:white;
+	border:1px solid;
+	border-radius:20px 20px 20px 20px;
+}
+#menu
+{
+	height:50px;
+	width:1000px;
+	background-color:white;
+	border:1px solid;
+	border-radius:20px 20px 0px 0px;
+	margin-top:5px;
+}
+#menu ul
+{
+	list-style-type:none; //for bullets or numbering etc.
+}
+#menu ul li
+{
+	display:inline;
+	//border:1px solid;
+	padding:10px;
+
+}
+#menu ul li a
+{
+	color:black;
+	text-decoration:none;
+}
+#menu ul li a:hover
+{
+	color:orange;
+}
+#register
+{
+	height:500px;
+	width:1000px;
+	background-color:white;
+	border:1px solid;
+	margin-top:5px;
+	border-radius:0px 0px 20px 20px;
+}
+#login
+{
+	height:500px;
+	width:1000px;
+	background-color:white;
+	border:1px solid;
+	margin-top:5px;
+	border-radius:0px 0px 20px 20px;
+}
+input[type=text], select
+{
+	width:100%;
+	padding: 10px 20px;
+	margin: 10px 0;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-sizing:border-box;
+}
+input[type=email]
+{
+	width:100%;
+	padding: 10px 20px;
+	margin: 10px 0;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-sizing:border-box;
+}
+input[type=password]
+{
+	width:100%;
+	padding: 10px 20px;
+	margin: 10px 0;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-sizing:border-box;
+}
+input[type=date]
+{
+	width:100%;
+	padding: 10px 20px;
+	margin: 10px 0;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-sizing:border-box;
+}
+input[type=submit]
+{
+	width:100%;
+	background-color: #4CAF50;
+	color:white;
+	padding:10px 20px;
+	margin:10px 0;
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+}
+input[type=submit]:hover
+{
+	background-color:#45a049;
+}
+#footer
+{
+	height:100px;
+	width:1000px;
+	background-color:white;
+	border:1px solid;
+	margin-top:10px;
+	border-radius:20px 20px 20px 20px;
+}
