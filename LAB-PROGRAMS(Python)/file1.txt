@@ -1,0 +1,44 @@
+Course Outcomes
+Students will be able to solve problems, explore real-world software development challenges,
+and create practical and contemporary applications. At the completion of this course, students
+should be able to do the following:
+ Understand and use the Object Oriented paradigm in Python
+ Use the IO model in Python to read and write disk files.
+ Write Python programs using collections, regular expression, classifying and
+categorizing text.
+Student Outcomes (SO): b, c, i, k, l
+b. An ability to analyze a problem, identify and define the computing requirements
+appropriate to its solution.
+c. An ability to design, implement and evaluate a system / computer‐based system, process,
+component or program to meet desired needs
+i. Design and conduct experiment as well as analyze and interpret data.
+k. An ability to use current techniques, skills and tools necessary for computing engineering
+practice.
+l. An ability to apply mathematical foundations, algorithmic principles and computer science
+theory in the modeling and design of computer-based systems (CS)
+Unit
+No Unit Content No. of
+hours SOs
+1 A Brief History of Python, Different Versions, Python 2 vs
+Python 3, Installing Python, Environment Variables, Executing
+Python from the Command Line, Editing Python Files, Basic
+Python Syntax, String Values, String Operators, Numeric Data
+Types Conversions, Simple Input and Output, Language
+components - Control Flow structures and Syntax - Relational
+Operators - Logical Operators - Bit Wise Operators, Python for
+Windows
+6 b,c,i
+2 Conditions, boolean logic, logical operators, ranges, Control
+statements: if-else, loops (for, while), Flow control, Functions,
+Scoping, Exceptions, Input and output, Modules, Collections,
+Lists, Tuples, Sets, Dictionaries, Modules, Standard Modules,
+Regular Expressions, Quantifiers, Basic String Operations
+6 c,i
+3 Principles of Object Orientation, Classes in Python, Creating
+Classes, Instance Methods, Access Specification, data modeling,
+persistent storage of objects, inheritance, polymorphism, operator
+overloading, abstract classes, exception handling, try block
+6 c,i
+4 File Handling, Writing Data to a File, Reading Data From a File -
+Additional File Methods: Using Pipes as Data Streams, Handling
+6 
