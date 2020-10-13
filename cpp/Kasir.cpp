@@ -1,0 +1,130 @@
+#include <iostream>
+using namespace std;
+int main (){
+    int kode,pri,jml,tot,byr,kbl;
+    char mad;
+    do 
+    {
+    cout<<"               RUMAH MAKAN               "<<endl;
+    cout<<"            NASI BALAP KARUNG            "<<endl;
+    cout<<"        Aplikasi kasir rumah makan       "<<endl;
+    cout<<"============================================"<<endl;
+    cout<<""<<endl;
+    cout<<"Menu Makanan        Harga"<<endl;
+    cout<<"1. AYAM GORENG        Rp. 10.000"<<endl;
+    cout<<"2. NASI GORENG        Rp.  8.000"<<endl;
+    cout<<"3. MIE PANGSIT        Rp. 10.000"<<endl;
+    cout<<"4. NASI BALAP KARUNG  Rp. 12.000"<<endl;
+    cout<<"5. NASI CAMPUR        Rp.  8.000"<<endl;
+    cout<<"6. JUS JERUK          Rp.  6.000"<<endl;
+    cout<<"7. AIR GELAS          Rp.    5000"<<endl;
+    cout<<'n'<<"MASUKKAN PILIHAN ANDA :";
+    cin>>kode;
+    switch (kode){
+    case 1:
+        cout<<'n'<<"AYAM GORENG"<<endl;
+        pri=10000;
+        cout<<"Masukkan Jumlah :";
+        cin>>jml;
+            tot=pri*jml;
+        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+        cout<<"DIBAYAR : Rp. ";
+        cin>>byr;
+            kbl=byr-tot;
+        cout<<"KEMBALI : Rp. "<<kbl<<endl;
+        cout<<"Masih ada Y/T :";
+        cin>>mad;
+        break;
+    case 2:
+        cout<<'n'<<"NASI GORENG"<<endl;
+            pri=8000;
+        cout<<"Masukkan Jumlah :";
+        cin>>jml;
+            tot=pri*jml;
+        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+        cout<<"DIBAYAR : Rp. ";
+        cin>>byr;
+            kbl=byr-tot;
+        cout<<"KEMBALI : Rp. "<<kbl<<endl;
+        cout<<"Masih ada Y/T :";
+        cin>>mad;
+        break;
+    case 3:
+        cout<<'n'<<"MIE PANGSIT"<<endl;
+            pri=10000;
+        cout<<"Masukkan Jumlah :";
+        cin>>jml;
+            tot=pri*jml;
+        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+        cout<<"DIBAYAR : Rp. ";
+        cin>>byr;
+            kbl=byr-tot;
+        cout<<"KEMBALI : Rp. "<<kbl<<endl;
+        cout<<"Masih ada Y/T :";
+        cin>>mad;
+        break;
+    case 4:
+        cout<<'n'<<"NASI BALAP PUYUNG"<<endl;
+            pri=12000;
+        cout<<"Masukkan Jumlah :";
+        cin>>jml;
+            tot=pri*jml;
+        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+        cout<<"DIBAYAR : Rp. ";
+        cin>>byr;
+            kbl=byr-tot;
+        cout<<"KEMBALI : Rp. "<<kbl<<endl;
+        cout<<"Masih ada Y/T :";
+        cin>>mad;
+        break;
+    case 5:
+        cout<<'n'<<"NASI CAMPUR"<<endl;
+            pri=8000;
+        cout<<"Masukkan Jumlah :";
+        cin>>jml;
+            tot=pri*jml;
+        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+        cout<<"DIBAYAR : Rp. ";
+        cin>>byr;
+            kbl=byr-tot;
+        cout<<"KEMBALI : Rp. "<<kbl<<endl;
+        cout<<"Masih ada Y/T :";
+        cin>>mad;
+        break;
+    case 6:
+        cout<<'n'<<"JUS JERUK"<<endl;
+            pri=6000;
+        cout<<"Masukkan Jumlah :";
+        cin>>jml;
+            tot=pri*jml;
+        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+        cout<<"DIBAYAR : Rp. ";
+        cin>>byr;
+            kbl=byr-tot;
+        cout<<"KEMBALI : Rp. "<<kbl<<endl;
+        cout<<"Masih ada Y/T :";
+        cin>>mad;
+        break;
+    case 7:
+        cout<<'n'<<"AIR MINERAL"<<endl;
+            pri=5000;
+        cout<<"Masukkan Jumlah :";
+        cin>>jml;
+            tot=pri*jml;
+        cout<<"Total harganya yaitu : Rp. "<< tot <<endl;
+        cout<<"DIBAYAR : Rp. ";
+        cin>>byr;
+            kbl=byr-tot;
+        cout<<"KEMBALI : Rp. "<< kbl <<endl;
+        cout<<"Masih ada Y/T :";
+        cin>>mad;
+        break;
+    default:
+    cout<<"Kode yang anda masukkan tidak valid";
+    }
+    } 
+    while (mad/='Y');
+    cout<<"Terimah Kasih Atas Kunjungan Anda WARUNG NASI BALAP KARUNG";
+    cin.get();
+    return 0;
+}

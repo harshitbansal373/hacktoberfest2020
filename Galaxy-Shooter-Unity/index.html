@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Galaxy Shooter</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body style="background-color:#000">
+  <div style="color:#FFF; text-align:center; font-size: 2em;">
+	<h1>Instructions</h1>
+	<h2>Use your keyboard to play this game</h2>
+	<h3>W,A,S,D to move the character</h3>
+	<h3>Space to shoot</h3>
+	<p>This game was made using Unity, if you wish to play this game on your desktop, you can click <a href="https://github.com/Nightey3s/Galaxy-Shooter" target="_blank">here</a> to access the game downloads</p>
+  </div>  
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 1280px; height: 720px"></div>
+      <div style="color:#FFF" class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Galaxy Shooter</div>
+      </div>
+    </div>
+  </body>
+</html>
