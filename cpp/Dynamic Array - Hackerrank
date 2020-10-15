@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+#include<vector>
+using namespace std;
+
+int main()
+{
+    int n,q;
+    cin>>n>>q;
+   vector<int> arr[n];
+   
+   int qq,x,y;
+   
+   int la=0;
+   for(int i=0;i<q;i++)
+   {
+cin>>qq>>x>>y;
+   
+   if(qq==1)
+   {
+     int a=(x^la)%n;
+     arr[a].push_back(y);
+   }
+    if(qq==2)
+   {
+int a=(x^la)%n;
+     la=arr[a][y%(arr[a].size())];
+     cout<<la<<endl;
+   }
+   }
+}
