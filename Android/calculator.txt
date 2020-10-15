@@ -1,0 +1,71 @@
+package com.example.it.calculator;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    Button ad,su,mu,di;
+    EditText e1,e2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ad = findViewById(R.id.plus);
+        su =findViewById(R.id.sub);
+        mu = findViewById(R.id.mul);
+        di = findViewById(R.id.div);
+        e1 = findViewById(R.id.val1);
+        e2 = findViewById(R.id.val2);
+        ad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1, num2, ans;
+                num1 = Integer.parseInt(e1.getText().toString());
+                num2 = Integer.parseInt(e2.getText().toString());
+                ans = num1 + num2;
+                Toast.makeText(MainActivity.this, "Addition is : " +ans, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        su.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1, num2, ans;
+                num1 = Integer.parseInt(e1.getText().toString());
+                num2 = Integer.parseInt(e2.getText().toString());
+                ans = num1 - num2;
+                Toast.makeText(MainActivity.this, "Subtraction is : " +ans, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        mu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1, num2, ans;
+                num1 = Integer.parseInt(e1.getText().toString());
+                num2 = Integer.parseInt(e2.getText().toString());
+                ans = num1 * num2;
+                Toast.makeText(MainActivity.this, "Multiplication is : " +ans, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        di.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1, num2, ans;
+                num1 = Integer.parseInt(e1.getText().toString());
+                num2 = Integer.parseInt(e2.getText().toString());
+                ans = num1 / num2;
+                Toast.makeText(MainActivity.this, "Division is : " +ans, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+}
