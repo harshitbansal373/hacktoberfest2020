@@ -1,0 +1,31 @@
+//Code for pattern syntax checker
+import java.util.Scanner;
+import java.util.regex.*;
+
+public class Solution
+{
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		int testCases = Integer.parseInt(in.nextLine());
+		while(testCases>0){
+			String pattern = in.nextLine();
+          	//Write your code
+              boolean valid = true;
+              try{
+            Pattern p = Pattern.compile(pattern);
+              }
+              catch(PatternSyntaxException e)
+              {   valid=false;
+                  System.out.println("Invalid");
+              }
+              if(valid)
+              System.out.println("Valid");
+              testCases--;
+        }
+    }
+		}
+	
+
+
+
+
