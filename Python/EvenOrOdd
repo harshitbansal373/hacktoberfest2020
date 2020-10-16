@@ -2,6 +2,6 @@
 
 n=int(input("Enter any number:");
 if n%2==0:
-  print("Num is Even")
+  print("This is an Even number.")
 else:
-  print("Num is Odd")
+  print("This is an Odd number.")
