@@ -1,0 +1,14 @@
+domains
+x=integer
+l=integer*
+predicates
+mergesort(l,l,l)
+clauses
+mergesort([],[],[]).
+mergesort([X],[],[X]).
+mergesort([],[Y],[Y]).
+mergesort([X|List1],[Y|List2],[X|List]):-
+X<=Y,!,
+mergesort(List1,[Y|List2],List).
+mergesort([X|List1],[Y|List2],[Y|List]):-
+mergesort([X|List1],List2,List).
