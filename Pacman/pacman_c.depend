@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1310131026 source:c:\documents and settings\codeblocks\desktop\pacman_c\move_guide.c
+	"header.h"
+
+1310455688 c:\documents and settings\codeblocks\desktop\pacman_c\header.h
+	<stdio.h>
+	"SDL/sdl.h"
+	"sdl/sdl_image.h"
+
+1308886642 source:c:\documents and settings\codeblocks\desktop\pacman_c\resource.rc
+
+1310054610 source:c:\documents and settings\codeblocks\desktop\pacman_c\map.c
+	"header.h"
+
+1310455690 source:c:\documents and settings\codeblocks\desktop\pacman_c\main.c
+	"header.h"
+
+1310196514 source:c:\documents and settings\codeblocks\desktop\pacman_c\accessories.c
+	"header.h"
+
+1310500690 source:e:\comproj\c projects\pacman_c\main.c
+	"header.h"
+
+1310500688 e:\comproj\c projects\pacman_c\header.h
+	<stdio.h>
+	"SDL/sdl.h"
+	"sdl/sdl_image.h"
+
+1310099610 source:e:\comproj\c projects\pacman_c\map.c
+	"header.h"
+
+1310503128 source:e:\comproj\c projects\pacman_c\move_guide.c
+	"header.h"
+
+1308931642 source:e:\comproj\c projects\pacman_c\resource.rc
+
+1310241514 source:e:\comproj\c projects\pacman_c\accessories.c
+	"header.h"
+
