@@ -1,0 +1,23 @@
+icon ICON pacman_128X128.ico
+1 VERSIONINFO
+FILEVERSION 0,0,0,1
+PRODUCTVERSION 0,0,0,1
+FILEOS 0x4
+FILETYPE 0x1
+{
+BLOCK "StringFileInfo"
+{
+	BLOCK "040904B0"
+	{
+		VALUE "CompanyName", "Akash Inc."
+		VALUE "FileDescription", "Pacman"
+		VALUE "FileVersion", "0.001"
+		VALUE "InternalName", "Pacman"
+		VALUE "LegalCopyright", "© 2011+ AKASH INC."
+		VALUE "OriginalFilename", "PACMAN.EXE"
+		VALUE "ProductName", "PACMAN"
+		VALUE "ProductVersion", "0.001"
+	}
+}
+}
+

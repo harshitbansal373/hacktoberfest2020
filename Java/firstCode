@@ -1,0 +1,12 @@
+/* I had to code a simple program which  will allow me to complete Hacktoberfest 2019 challenge.*/
+
+//Creating a class
+class HackFirstCode 
+{ 
+    // Main method
+    public static void main(String args[]) 
+    { 
+        //Prints the sentence.
+        System.out.println("My name is Mohamed, I coded this simple code to complete the challenge of 5 pull request."); 
+    } 
+} 

@@ -43,6 +43,7 @@
 ## Rules
 
 -   "Starter code" or "Beginner's code" in any language.
+-   Put your code in the desired folder or create one if not found to keep things organized.
 -   Data Structure and Algorithms.
 -   Anything valuable.
 
