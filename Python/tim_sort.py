@@ -1,77 +1,119 @@
-def insertion_sort(array, left=0, right=None):
-    if right is None:
-        right = len(array) - 1
+# Python3 program to perform basic timSort 
+MIN_MERGE = 32
 
-    # Loop from the element indicated by
-    # `left` until the element indicated by `right`
-    for i in range(left + 1, right + 1):
-        # This is the element we want to position in its
-        # correct place
-        key_item = array[i]
+def calcMinRun(n): 
+	"""Returns the minimum length of a 
+	run from 23 - 64 so that 
+	the len(array)/minrun is less than or 
+	equal to a power of 2. 
 
-        # Initialize the variable that will be used to
-        # find the correct position of the element referenced
-        # by `key_item`
-        j = i - 1
+	e.g. 1=>1, ..., 63=>63, 64=>32, 65=>33, 
+	..., 127=>64, 128=>32, ... 
+	"""
+	r = 0
+	while n >= MIN_MERGE: 
+		r |= n & 1
+		n >>= 1
+	return n + r 
 
-        # Run through the list of items (the left
-        # portion of the array) and find the correct position
-        # of the element referenced by `key_item`. Do this only
-        # if the `key_item` is smaller than its adjacent values.
-        while j >= left and array[j] > key_item:
-            # Shift the value one position to the left
-            # and reposition `j` to point to the next element
-            # (from right to left)
-            array[j + 1] = array[j]
-            j -= 1
 
-        # When you finish shifting the elements, position
-        # the `key_item` in its correct location
-        array[j + 1] = key_item
+# This function sorts array from left index to 
+# to right index which is of size atmost RUN 
+def insertionSort(arr, left, right): 
+	for i in range(left + 1, right + 1): 
+		j = i 
+		while j > left and arr[j] < arr[j - 1]: 
+			arr[j], arr[j - 1] = arr[j - 1], arr[j] 
+			j -= 1
 
-    return array
-This modified implementation adds a couple of parameters, left and right, that indicate which portion of the array should be sorted. This allows the Timsort algorithm to sort a portion of the array in place. Modifying the function instead of creating a new one means that it can be reused for both insertion sort and Timsort.
 
-Now take a look at the implementation of Timsort:
+# Merge function merges the sorted runs 
+def merge(arr, l, m, r): 
+	
+	# original array is broken in two parts 
+	# left and right array 
+	len1, len2 = m - l + 1, r - m 
+	left, right = [], [] 
+	for i in range(0, len1): 
+		left.append(arr[l + i]) 
+	for i in range(0, len2): 
+		right.append(arr[m + 1 + i]) 
 
-def timsort(array):
-    min_run = 32
-    n = len(array)
+	i, j, k = 0, 0, l 
+	
+	# after comparing, we merge those two array 
+	# in larger sub array 
+	while i < len1 and j < len2: 
+		if left[i] <= right[j]: 
+			arr[k] = left[i] 
+			i += 1
 
-    # Start by slicing and sorting small portions of the
-    # input array. The size of these slices is defined by
-    # your `min_run` size.
-    for i in range(0, n, min_run):
-        insertion_sort(array, i, min((i + min_run - 1), n - 1))
+		else: 
+			arr[k] = right[j] 
+			j += 1
 
-    # Now you can start merging the sorted slices.
-    # Start from `min_run`, doubling the size on
-    # each iteration until you surpass the length of
-    # the array.
-    size = min_run
-    while size < n:
-        # Determine the arrays that will
-        # be merged together
-        for start in range(0, n, size * 2):
-            # Compute the `midpoint` (where the first array ends
-            # and the second starts) and the `endpoint` (where
-            # the second array ends)
-            midpoint = start + size - 1
-            end = min((start + size * 2 - 1), (n-1))
+		k += 1
 
-            # Merge the two subarrays.
-            # The `left` array should go from `start` to
-            # `midpoint + 1`, while the `right` array should
-            # go from `midpoint + 1` to `end + 1`.
-            merged_array = merge(
-                left=array[start:midpoint + 1],
-                right=array[midpoint + 1:end + 1])
+	# Copy remaining elements of left, if any 
+	while i < len1: 
+		arr[k] = left[i] 
+		k += 1
+		i += 1
 
-            # Finally, put the merged array back into
-            # your array
-            array[start:start + len(merged_array)] = merged_array
+	# Copy remaining element of right, if any 
+	while j < len2: 
+		arr[k] = right[j] 
+		k += 1
+		j += 1
 
-        # Each iteration should double the size of your arrays
-        size *= 2
 
-    return array
+# Iterative Timsort function to sort the 
+# array[0...n-1] (similar to merge sort) 
+def timSort(arr): 
+	n = len(arr) 
+	minRun = calcMinRun(n) 
+	
+	# Sort individual subarrays of size RUN 
+	for start in range(0, n, minRun): 
+		end = min(start + minRun - 1, n - 1) 
+		insertionSort(arr, start, end) 
+
+	# Start merging from size RUN (or 32). It will merge 
+	# to form size 64, then 128, 256 and so on .... 
+	size = minRun 
+	while size < n: 
+		
+		# Pick starting point of left sub array. We 
+		# are going to merge arr[left..left+size-1] 
+		# and arr[left+size, left+2*size-1] 
+		# After every merge, we increase left by 2*size 
+		for left in range(0, n, 2 * size): 
+
+			# Find ending point of left sub array 
+			# mid+1 is starting point of right sub array 
+			mid = min(n - 1, left + size - 1) 
+			right = min((left + 2 * size - 1), (n - 1)) 
+
+			# Merge sub array arr[left.....mid] & 
+			# arr[mid+1....right] 
+			merge(arr, left, mid, right) 
+
+		size = 2 * size 
+
+
+# Driver program to test above function 
+if __name__ == "__main__": 
+
+	arr = [-2, 7, 15, -14, 0, 15, 0, 
+		7, -7, -4, -13, 5, 8, -14, 12] 
+
+	print("Given Array is") 
+	print(arr) 
+
+	# Function Call 
+	timSort(arr) 
+
+	print("After Sorting Array is") 
+	print(arr) 
+	# [-14, -14, -13, -7, -4, -2, 0, 0, 
+		5, 7, 7, 8, 12, 15, 15] 
