@@ -1,15 +1,47 @@
-print("Armstrong number checker(within interval)")
-print("**Here you can check Armstrong numbers available within your desired interval**")
-no_range = list(map(int,input('Enter range').split()))
+# Python program to determine whether 
+# the number is Armstrong number or not 
 
-print("Armstrong numbers between",no_range[0],"&",no_range[1],"is: \n")
-for num in range(no_range[0], no_range[1] + 1):
-   # initialize sum
-    sum = 0
-    temp = num
-    while temp > 0:
-        digit = temp % 10
-        sum += digit ** 3
-        temp //= 10
-    if sum == num:
-        print(num)
+# Function to calculate x raised to 
+# the power y 
+def power(x, y): 
+	
+	if y == 0: 
+		return 1
+	if y % 2 == 0: 
+		return power(x, y // 2) * power(x, y // 2) 
+		
+	return x * power(x, y // 2) * power(x, y // 2) 
+
+# Function to calculate order of the number 
+def order(x): 
+
+	# Variable to store of the number 
+	n = 0
+	while (x != 0): 
+		n = n + 1
+		x = x // 10
+		
+	return n 
+
+# Function to check whether the given 
+# number is Armstrong number or not 
+def isArmstrong(x): 
+	
+	n = order(x) 
+	temp = x 
+	sum1 = 0
+	
+	while (temp != 0): 
+		r = temp % 10
+		sum1 = sum1 + power(r, n) 
+		temp = temp // 10
+
+	# If condition satisfies 
+	return (sum1 == x) 
+
+# Driver code 
+x = 153
+print(isArmstrong(x)) 
+
+x = 1253
+print(isArmstrong(x)) 
