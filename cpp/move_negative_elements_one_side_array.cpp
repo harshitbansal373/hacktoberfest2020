@@ -13,10 +13,14 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		cin >> arr[i];
 	}
-  
+  	
+	//we can use any one of the approaches below.
+	
 	//two-pointer approach
 	int l = 0, r = n - 1;
 	while (l <= r) {
+		
+		// if both are negative
 		if (arr[l] < 0 && arr[r] < 0) {
 			l++;
 		} else if (arr[l] > 0 && arr[r] < 0) {
@@ -25,6 +29,8 @@ int main() {
 			arr[r] = temp;
 			l++;
 			r--;
+			
+		// if both are positive
 		} else if (arr[l] > 0 && arr[r] > 0) {
 			r--;
 		} else {
