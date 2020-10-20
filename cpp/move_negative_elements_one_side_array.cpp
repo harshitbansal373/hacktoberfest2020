@@ -1,5 +1,5 @@
 //c++ program to move negative elements in an array to one side without sorting.
-//order does not mtter here.
+//order does not matter here.
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
