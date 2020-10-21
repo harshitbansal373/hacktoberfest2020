@@ -3,6 +3,7 @@
 # importing calendar module
 import calendar
 
+dd=12
 yy = 2014  # year
 mm = 11    # month
 
@@ -11,4 +12,4 @@ mm = 11    # month
 # mm = int(input("Enter month: "))
 
 # display the calendar
-print(calendar.month(yy, mm))
+print(calendar.month(yy, mm, dd))
