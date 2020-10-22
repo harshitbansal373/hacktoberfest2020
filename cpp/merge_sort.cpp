@@ -1,69 +1,68 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-void swapping(int &a, int &b) {     //swap the content of a and b
-   int temp;
-   temp = a;
-   a = b;
-   b = temp;
+
+void merge(int arr[], int l, int m, int r) {
+    int nl = m - l + 1;
+    int nr = r - m;
+    int larr[nl], rarr[nr];
+    for (int i = 0; i < nl; i++) {
+        larr[i] = arr[l + i];
+    }
+    for (int j = 0; j < nr; j++) {
+        rarr[j] = arr[m + 1 + j];
+    }
+    int i = 0;
+    int j = 0;
+    int k = l;
+    while (i < nl && j < nr) {
+        if (larr[i] <= rarr[j]) {
+            arr[k] = larr[i];
+            i++;
+        }
+        else {
+            arr[k] = rarr[j];
+            j++;
+        }
+        k++;
+    }
+    while (i < nl) {
+        arr[k] = larr[i];
+        i++;
+        k++;
+    }
+    while (j < nr) {
+        arr[k] = rarr[j];
+        j++;
+        k++;
+    }
 }
-void display(int *array, int size) {
-   for(int i = 0; i<size; i++)
-      cout << array[i] << " ";
-   cout << endl;
+
+void MergeSort(int arr[], int l, int r) {
+    int m = l + ((r - l) / 2);
+    if (l < r) {
+        MergeSort(arr, l, m);
+        MergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
 }
-void merge(int *array, int l, int m, int r) {
-   int i, j, k, nl, nr;
-   //size of left and right sub-arrays
-   nl = m-l+1; nr = r-m;
-   int larr[nl], rarr[nr];
-   //fill left and right sub-arrays
-   for(i = 0; i<nl; i++)
-      larr[i] = array[l+i];
-   for(j = 0; j<nr; j++)
-      rarr[j] = array[m+1+j];
-   i = 0; j = 0; k = l;
-   //marge temp arrays to real array
-   while(i < nl && j<nr) {
-      if(larr[i] <= rarr[j]) {
-         array[k] = larr[i];
-         i++;
-      }else{
-         array[k] = rarr[j];
-         j++;
-      }
-      k++;
-   }
-   while(i<nl) {       //extra element in left array
-      array[k] = larr[i];
-      i++; k++;
-   }
-   while(j<nr) {     //extra element in right array
-      array[k] = rarr[j];
-      j++; k++;
-   }
-}
-void mergeSort(int *array, int l, int r) {
-   int m;
-   if(l < r) {
-      int m = l+(r-l)/2;
-      // Sort first and second arrays
-      mergeSort(array, l, m);
-      mergeSort(array, m+1, r);
-      merge(array, l, m, r);
-   }
-}
-int main() {
-   int n;
-   cout << "Enter the number of elements: ";
-   cin >> n;
-   int arr[n];     //create an array with given number of elements
-   cout << "Enter elements:" << endl;
-   for(int i = 0; i<n; i++) {
-      cin >> arr[i];
-   }
-   cout << "Array before Sorting: ";
-   display(arr, n);
-   mergeSort(arr, 0, n-1);     //(n-1) for last index
-   cout << "Array after Sorting: ";
-   display(arr, n);
+
+int main(int argc, char* argv[]) {
+    freopen(argv[1], "r", stdin);
+    freopen("mergesort.txt", "w", stdout);
+    vector <int> v ;
+    int s;
+    while (cin>>s) {
+        v.push_back(s);
+    }
+    int n = v.size();
+    int arr[n];
+    for(int i = 0; i < n; i++){
+        arr[i] = v[i];
+    }
+    MergeSort(arr, 0, n - 1);
+    for (int i = 0; i < n-1; i++) {
+        cout << arr[i] << endl;
+    }
+    cout<<arr[n-1];
+    return 0;
 }
