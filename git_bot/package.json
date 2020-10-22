@@ -1,0 +1,19 @@
+{
+  "name": "git_bot",
+  "version": "1.0.0",
+  "description": "Description of the hack the version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PranavHegde99/git_bot.git"
+  },
+  "author": "Pranav Hegde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PranavHegde99/git_bot/issues"
+  },
+  "homepage": "https://github.com/PranavHegde99/git_bot#readme"
+}
