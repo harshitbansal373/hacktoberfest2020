@@ -1,35 +1,19 @@
-/*
-Following is the code to Find if entered string is Palindrome or not
-
-*/
-
-#include <stdio.h> 
-#include <string.h> 
-  
-// A function to check if a string str is palindrome 
-void isPalindrome(char str[]) 
-{ 
-    // Start from leftmost and rightmost corners of str 
-    int l = 0; 
-    int h = strlen(str) - 1; 
-  
-    // Keep comparing characters while they are same 
-    while (h > l) 
-    { 
-        if (str[l++] != str[h--]) 
-        { 
-            printf("%s is Not Palindrome", str); 
-            return; 
-        } 
-    } 
-    printf("%s is palindrome", str); 
-} 
-  
-// Driver program to test above function 
-int main() 
-{ 
-    isPalindrome("abba"); 
-    isPalindrome("abbccbba"); 
-    isPalindrome("geeks"); 
-    return 0; 
-}
+#include<stdio.h>  
+int main()    
+{    
+  int n,r,sum=0,temp;    
+  printf("enter the number=");    
+  scanf("%d",&n);    
+  temp=n;    
+  while(n>0)    
+  {    
+    r=n%10;    
+    sum=(sum*10)+r;    
+    n=n/10;    
+  }    
+  if(temp==sum)    
+    printf("palindrome number ");    
+  else    
+    printf("not palindrome");   
+  return 0;  
+}   
