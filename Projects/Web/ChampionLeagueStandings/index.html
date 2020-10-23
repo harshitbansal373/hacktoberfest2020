@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Champions Leaguea Standings</title>
+    <meta name="description" content="Football" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <meta name="theme-color" content="#212121 " />
+  </head>
+  <body>
+    <div class="container" id="body-content">
+      <div class="row">
+        <div class="col s12 m12" id="standings">
+          <!-- Card -->
+        </div>
+      </div>
+    </div>
+
+    <script src="js/materialize.min.js"></script>
+
+    <script src="js/api.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        getStandings();
+      });
+    </script>
+  </body>
+</html>
