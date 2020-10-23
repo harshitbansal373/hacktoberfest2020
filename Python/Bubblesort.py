@@ -1,22 +1,22 @@
-num_arr = []
-arr_length = raw_input("How many numbers will be there in the array:")
+# Python program for implementation of Bubble Sort 
 
-print("Enter the numbers...")
-for i in range(int(arr_length)):
-  num = raw_input("num"+str(i+1)+":")
-  num_arr.append(int(num))
-  
-print("Your array is: ", num_arr)
+def bubbleSort(arr): 
+	n = len(arr) 
 
-flag = 0
-for i in range(int(arr_length)):
-  for j in range(int(arr_length)-i-1):
-    if num_arr[j] > num_arr[j+1]:
-      # swap the numbers
-      num_arr[j], num_arr[j+1] = num_arr[j+1], num_arr[j]
-      flag = 1
-  if flag==0:
-    # means nothing was swapped
-    break
+	# Traverse through all array elements 
+	for i in range(n): 
 
-print("Sorted Array: ", num_arr)
+		# Last i elements are already in place 
+		for j in range(0, n-i-1): 
+ 
+			if arr[j] > arr[j+1] : 
+				arr[j], arr[j+1] = arr[j+1], arr[j] 
+
+# Driver code to test above 
+arr = [64, 34, 25, 12, 22, 11, 90] 
+
+bubbleSort(arr) 
+
+print ("Sorted array is:") 
+for i in range(len(arr)): 
+	print ("%d" %arr[i]), 

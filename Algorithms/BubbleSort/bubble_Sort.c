@@ -1,15 +1,37 @@
-void BubbleSort(int A[], int size)
-{
-	for(int i=0; i<size; i++)
-	{
-		for(int j=0; j<size-1; j++)
-		{
-			if( A[j] > A[j+1] )
-			{
-				int temp = A[j];
-				A[j] = A[j+1];
-				A[j+1] = temp;
-			}
-		}
-	}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+int N;
+printf("\n Enter the number of elements in the array\n");
+scanf("%d",&N);
+int *arr=malloc(N*sizeof(*arr));
+printf("\n Enter the elemnts of the array\n");
+for(int i=0;i<N;i++){
+  scanf("%d",&arr[i]);
+}
+printf("\n Original Array\n");
+for(int i=0;i<N;i++){
+  printf("%d ",arr[i]);
+}
+  int count=0;
+  for(int i=0;i<N-1;i++){
+    if(arr[i]>arr[i+1])
+      count++;
+  }
+  if (count>0){
+int temp;
+for(int i=0;i<N-1;i++){
+  for(int j=0;j<N-i-1;j++){
+    if(arr[j]>arr[j+1]){
+      temp=arr[j];
+      arr[j]=arr[j+1];
+      arr[j+1]=temp;
+    }
+  }
+}}
+printf("\n Sorted Array\n");
+for(int i=0;i<N;i++){
+  printf("%d ",arr[i]);
+}
 }
