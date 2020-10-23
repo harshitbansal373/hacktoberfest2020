@@ -1,9 +1,17 @@
+def isprime(x):
+    prime = True
+    
+    if x ==2:
+        prime = True
+        return prime
+    if x%2 == 0 :
+        prime= False
+        return prime
+           
+    for y in range(3,x,2):
+        if x%y ==0:
+            prime = False
+    return prime
+
 num=int(input("enter number:"))
-count=0
-for i in range(1,num+1):
-    if num%i==0:
-        count=count+1
-if count<=2:
-    print("prime number")
-else:
-    print("composite number")
+print(isprime(num))
