@@ -1,0 +1,23 @@
+/// NICOI ALEXANDRU - tr0yyy
+/// sum of divisors
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+long n,d;
+long long s;
+int main()
+{
+    cin>>n;
+    s=0;
+    for(d=1;d<=sqrt(n);d++)
+    if(n%d==0)
+        s=s+d+n/d;
+    d=sqrt(n);
+    if(d*d==n)
+        s=s-d;
+    cout<<s;
+    return 0;
+}
