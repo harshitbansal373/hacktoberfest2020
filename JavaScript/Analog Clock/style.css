@@ -1,0 +1,65 @@
+.title {
+    text-align: center;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: 300;
+}
+.wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+}
+
+.clock {
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    margin: 50px auto;
+    border: 20px solid grey;
+    border-radius: 50%;
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    background: url(clock-face.png);
+    background-size: cover;
+    
+}
+
+.hand {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 6px;
+    background: black;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0, 3.11, 0.58, 1);
+}
+
+.hour-hand {
+    height: 15px;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 52%, rgba(0,0,0,1) 53%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 50%,rgba(0,0,0,0) 52%,rgba(0,0,0,1) 53%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0) 50%,rgba(0,0,0,0) 52%,rgba(0,0,0,1) 53%,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
+}
+
+.min-hand {
+    height: 15px;
+    border-radius: 50%;
+
+}
+
+.second-hand {
+    background: -moz-linear-gradient(left, rgba(255,71,15,1) 20%, rgba(255,71,15,0) 21%, rgba(255,71,15,0) 50%, rgba(255,71,15,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(255,71,15,1) 20%,rgba(255,71,15,0) 21%,rgba(255,71,15,0) 50%,rgba(255,71,15,0) 100%);
+    background: linear-gradient(to right, rgba(255,71,15,1) 20%,rgba(255,71,15,0) 21%,rgba(255,71,15,0) 50%,rgba(255,71,15,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6ff470f', endColorstr='#00ff470f',GradientType=1 );
+}
