@@ -16,8 +16,8 @@ void push()
     }
     else
     {
-        top++;
-        a[top]=temp;
+      
+        a[++top]=temp;
         printf("\nNumber stored successfully\n");
     }
 }
@@ -30,8 +30,8 @@ void pop()
     }
     else
     {
-        temp=a[top];
-        top--;
+        temp=a[top--];
+   
         printf("\n%d deleted from stack\n",temp);
     }
 }
