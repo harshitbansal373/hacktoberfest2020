@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+       
+        
+        System.out.println(fibD(n, new int[n + 1]));
+       
+    }
+    
+    
+    
+     public static int fibD(int n, int []qb){
+        if(n==0 || n==1){
+            qb[n]=n;
+            return n;
+        }
+        if(qb[n]!=0){
+            return qb[n];
+        }
+        int fnM1 = fibD(n-1,qb);
+        int fnM2 = fibD(n-2,qb);
+        int f = fnM1+fnM2;
+        qb[n]=f;
+        return qb[n];
+    }
+
+
+}
