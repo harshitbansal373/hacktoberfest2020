@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <conio.h>
-#include<stdlib.h>
+#include<bits/stdc++.h>
+using namespace std;
 
 int main()
 {

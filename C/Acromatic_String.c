@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
-void main()
+int main()
 {
 char str[30];
 int i=0;
@@ -20,5 +20,5 @@ printf("\t%c",str[i+1]);
 }
 i++;
 }
-getch();
+return 0;
 }
