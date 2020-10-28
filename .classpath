@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Algorithms/BubbleSort"/>
+	<classpathentry kind="src" path="Algorithms/graph/bfs_dfs"/>
+	<classpathentry kind="src" path="Algorithms/InsertionSort"/>
+	<classpathentry kind="src" path="Algorithms/Kruskal"/>
+	<classpathentry kind="src" path="Algorithms/MergeSort"/>
+	<classpathentry kind="src" path="Algorithms/SelectionSort"/>
+	<classpathentry kind="src" path="Algorithms/TowerOfHanoi"/>
+	<classpathentry kind="src" path="Algorithms/WaveSort"/>
+	<classpathentry kind="src" path="Java"/>
+	<classpathentry kind="src" path="Projects/Java"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
