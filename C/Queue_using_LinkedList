@@ -1,0 +1,114 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct queue
+{
+    int num;
+    struct queue *nxt;
+}*front=NULL,*rear=NULL;
+typedef struct queue que;
+
+void enqueue();
+int dequeue();
+int peek();
+int isEmpty();
+void display(); 
+
+int main()
+{
+    int ch;
+    while (1)
+    {
+        printf("1.Insert\n");
+        printf("2.Delete\n");
+        printf("3.Display the element at the front\n");
+        printf("4.Display all elements of the queue\n");
+        printf("5.Quit\n");
+        printf("Enter your choice : ");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+                enqueue();
+                break;
+            case 2:
+                printf("Deleted element is  %d\n",dequeue());
+                break;
+            case 3:
+                printf("Element at the front of the queue is %d\n",peek());
+                break;
+            case 4:
+                display();
+                break;
+            case 5:
+                exit(1);
+                break;
+            default:
+                printf("Wrong Choice!\n");
+        }
+    }  
+}
+
+void enqueue()
+{
+    que *new=(que *)malloc(sizeof(que *));
+    if(new==NULL)
+    {
+        printf("The queue is full");
+        return;
+    }
+    printf("Enter the number to be inserted in the queue");
+    scanf("%d",&new->num);
+    new->nxt=NULL;
+    if(isEmpty())
+    {
+        front=new;
+        rear=new;
+        return;
+    }
+    rear->nxt=new;
+    rear=rear->nxt;
+}
+int dequeue()
+{
+    if(!isEmpty())
+    {
+        que *t=front;
+        int n=front->num;
+        front=front->nxt;
+        free(t);
+        return n;
+    }
+    exit(1);
+}
+int peek()
+{
+    if(!isEmpty())
+    {
+        return front->num;
+    }
+    exit(1);
+}
+int isEmpty()
+{
+    if(front==NULL&&rear==NULL)
+    {
+        printf("The queue is empty\n");
+        return 1;
+    }
+    return 0;
+}
+void display()
+{
+    que *p=front;
+    if(!isEmpty())
+    {
+        printf("front:    ");
+        while(p!=NULL)
+        {
+            printf("%d  ",p->num);
+            p=p->nxt;
+        }
+        printf("  :rear\n");
+    }
+}
