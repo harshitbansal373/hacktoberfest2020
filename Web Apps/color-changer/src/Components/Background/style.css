@@ -1,0 +1,18 @@
+.back-container{
+    width:100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-box{
+    width:400px;
+    height: 250px;
+    border: 2px black solid;
+    background-color: cadetblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
