@@ -1,0 +1,50 @@
+import java.util.*;
+class SeriesSum
+{
+    int x,n;
+    double sum;
+    SeriesSum(int xx,int nn)
+    {
+        x=xx;
+        n=nn;
+        sum=0.0;
+    }
+    int findfact(int m)
+    {
+        if(m==1)
+        return 1;
+        else
+        return(m*findfact(--m));
+    }
+    int findpower(int x,int y)
+    {
+        if(n==0)
+        return 1;
+        else
+        return(x*findpower(x,--n));
+    }
+    void calculate()
+    {
+        int N=2,D=1;
+        for(int i=1;i<=n;i=i++)
+        {
+            sum=sum+findpower(x,N)+findfact(D);
+            N=N+2;
+            D=D+2;
+        }
+    }
+    void display()
+    {
+        System.out.println("Sum of the series ="+sum);
+    }
+    public static void main()
+    {
+        Scanner in=new Scanner (System.in);
+        System.out.println("Enter the values of x and n");
+        int x=in.nextInt();
+        int n=in.nextInt();
+        SeriesSum ob=new SeriesSum(x,n);
+        ob.calculate();
+        ob.display();
+    }
+}
