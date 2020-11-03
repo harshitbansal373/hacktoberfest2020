@@ -16,3 +16,4 @@ for i in range(0, n):
             nums.append(ele)
 target = int(input("Enter target:"))
 twoSum(nums,target)
+#done
