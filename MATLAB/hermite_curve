@@ -1,0 +1,16 @@
+clc
+clear all
+P0=[9 7];
+P1=[10 12];
+P0u=[3 2];
+P1u=[1 4];
+alpha=input('Enter the value of a= ')
+beta=input('Enter the value of b= ')
+count=0;
+for u=0:0.001:1
+    Px=(2*u.^3-3*u.^2+1)*P0(1)+(-2*u.^3+3*u.^2)*P1(1)+(u-2*u.^2+u.^3)*alpha*P0u(1)+(u.^3-u.^2)*beta*P1u(1);
+    Py=(2*u.^3-3*u.^2+1)*P0(2)+(-2*u.^3+3*u.^2)*P1(2)+(u-2*u.^2+u.^3)*alpha*P0u(2)+(u.^3-u.^2)*beta*P1u(2);
+    plot(Px,Py,'r.','Markersize',5)
+    hold on
+    count=count+1;
+end
