@@ -1,0 +1,4 @@
+Part = stlread("Sample.stl");                       %Read the STL file
+vertices = Part.Points;                             %Coordinates of the vertices
+connectivitylist = Part.ConnectivityList;           %Connectivity of the triangles
+trimesh(Part,'Facecolor','interp','Edgecolor','k'); %Display the file
