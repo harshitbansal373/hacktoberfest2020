@@ -1,0 +1,1 @@
+Creating a neural network from scratch and implementing it on an MNIST dataset.
