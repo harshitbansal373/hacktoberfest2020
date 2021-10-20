@@ -17,3 +17,5 @@ division (C, A, B):-
 C= A/B.
 percentage (C, A, B):-
 C= (A/B)*100.
+Modulus (C, A, B):-
+C= A%B.
